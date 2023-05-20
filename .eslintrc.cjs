@@ -4,6 +4,7 @@ module.exports = {
     es2021: true
   },
   extends: [
+    "eslint:recommended",
     'plugin:react/recommended',
     'standard-with-typescript',
     'plugin:prettier/recommended',
@@ -28,8 +29,11 @@ module.exports = {
   rules: {
     'react/prop-types':'off',
     'react/react-in-jsx-scope': 'off',
+    'no-empty-function':'error',
+    'eqeqeq':['error', 'always'],
     '@typescript-eslint/explicit-function-return-type': 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    'import/no-absolute-path':'off'
+    '@typescript-eslint/no-explicit-any': 'warn',
+    'import/no-absolute-path':'off',
+    '@typescript-eslint/no-duplicate-enum-values':'warn',
   },
 }
