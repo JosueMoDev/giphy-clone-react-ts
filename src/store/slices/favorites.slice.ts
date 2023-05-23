@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
-import type {PayloadAction} from '@reduxjs/toolkit';
+// import type {PayloadAction} from '@reduxjs/toolkit';
 
 export interface FavoritesInitialState {
   favorites: [];
@@ -12,4 +12,4 @@ export const favoriteSlice = createSlice({
   initialState,
   reducers: {},
 });
-export const {} = favoriteSlice.actions;
+export const fav = favoriteSlice.actions;

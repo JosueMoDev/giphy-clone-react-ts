@@ -27,4 +27,4 @@ export const giphySelectedSlice = createSlice({
   initialState,
   reducers: {},
 });
-export const {} = giphySelectedSlice.actions;
+export const gif = giphySelectedSlice.actions;

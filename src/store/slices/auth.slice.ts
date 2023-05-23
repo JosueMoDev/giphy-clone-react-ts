@@ -1,5 +1,5 @@
 import {createSlice} from '@reduxjs/toolkit';
-import type {PayloadAction} from '@reduxjs/toolkit';
+// import type {PayloadAction} from '@reduxjs/toolkit';
 
 enum Status {
   authenticated = 'authenticated',
@@ -26,4 +26,4 @@ export const authSlice = createSlice({
   initialState,
   reducers: {},
 });
-export const {} = authSlice.actions;
+export const auth = authSlice.actions;
