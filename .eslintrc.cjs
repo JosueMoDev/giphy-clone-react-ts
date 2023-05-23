@@ -8,7 +8,8 @@ module.exports = {
     'plugin:react/recommended',
     'standard-with-typescript',
     'plugin:prettier/recommended',
-    'plugin:react-hooks/recommended'
+    'plugin:react-hooks/recommended',
+    'plugin:jsx-a11y/recommended'
   ],
   overrides: [
   ],
@@ -24,7 +25,15 @@ module.exports = {
   },
   ignorePatterns: ['.eslintrc.js'],
   plugins: [
-    'react'
+    'react',
+    'prettier',
+    'jsx-a11y',
+    'react-hooks',
+    'react-refresh',
+    'promise',
+    'n',
+    'import',
+    '@typescript-eslint'
   ],
   rules: {
     'react/prop-types':'off',
