@@ -1,28 +1,10 @@
 import {createSlice} from '@reduxjs/toolkit';
+import {
+  type SearchInitialState,
+  searchStatus,
+  searchingType,
+} from '../interfaces';
 // import type {PayloadAction} from '@reduxjs/toolkit';
-import type {Giphy} from './giphy.slice';
-
-enum searchStatus {
-  searching = 'searching',
-  empty = 'empty',
-}
-
-enum searchingType {
-  gifs = 'Gifs',
-  sickers = 'Stickers',
-}
-
-export interface SearchInitialState {
-  state: searchStatus;
-  term: string | null;
-  gifs: Giphy[] | [];
-  stickers: Giphy[] | [];
-  total_gifs: number | null;
-  total_stickers: number | null;
-  tags: string[] | [];
-  searchingType: searchingType;
-}
-
 const initialState: SearchInitialState = {
   state: searchStatus.empty,
   term: null,

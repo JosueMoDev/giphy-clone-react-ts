@@ -4,6 +4,7 @@ import {
   categorySlice,
   favoriteSlice,
   giphySelectedSlice,
+  searchSlice,
 } from './slices';
 export const store = configureStore({
   reducer: {
@@ -11,6 +12,7 @@ export const store = configureStore({
     categories: categorySlice.reducer,
     favorites: favoriteSlice.reducer,
     giphySelected: giphySelectedSlice.reducer,
+    search: searchSlice.reducer,
   },
 });
 export type RootState = ReturnType<typeof store.getState>;

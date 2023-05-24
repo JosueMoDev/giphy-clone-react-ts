@@ -1,29 +1,33 @@
 module.exports = {
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
   },
   extends: [
-    "eslint:recommended",
+    'eslint:recommended',
     'plugin:react/recommended',
     'standard-with-typescript',
     'plugin:prettier/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:jsx-a11y/recommended'
+    'plugin:jsx-a11y/recommended',
   ],
-  overrides: [
-  ],
+  overrides: [],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
-    project: 'tsconfig.json',
+    project: '/tsconfig.json',
     ecmaFeatures: {
-      tsx: true,
-      jsx: true
-    }
+      jsx: true,
+    },
+    // tsconfigRootDir: __dirname,
   },
-  ignorePatterns: ['.eslintrc.js'],
+  ignorePatterns: ['.eslintrc.cjs'],
   plugins: [
     'react',
     'prettier',
@@ -33,18 +37,17 @@ module.exports = {
     'promise',
     'n',
     'import',
-    '@typescript-eslint'
   ],
   rules: {
-    'react/prop-types':'off',
+    'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
-    'no-empty-function':'off',
-    'eqeqeq':['error', 'always'],
+    'no-empty-function': 'off',
+    eqeqeq: ['error', 'always'],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    'import/no-absolute-path':'off',
-    '@typescript-eslint/no-duplicate-enum-values':'warn',
-    '@typescript-eslint/no-floating-promises':'off',
-    '@typescript-eslint/triple-slash-reference':'off'
+    'import/no-absolute-path': 'off',
+    '@typescript-eslint/no-duplicate-enum-values': 'warn',
+    '@typescript-eslint/no-floating-promises': 'off',
+    '@typescript-eslint/triple-slash-reference': 'off',
   },
-}
+};
